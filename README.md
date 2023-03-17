@@ -8,4 +8,4 @@ Python code to extract and transform the data is provided in the file named 'ETL
 ![image failed to load](QuickDBD-Crowdfunding_Database.png)
 
 ## Database Loading
-SQL code to generate all 4 tables is provided in the file named 'Schema.sql'
+SQL code to generate all 4 tables is provided in the file named 'crowdfunding_db_schema.sql'
