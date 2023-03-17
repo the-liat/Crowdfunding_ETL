@@ -13,7 +13,7 @@ SQL code to generate all 4 tables is provided in the file named 'crowdfunding_db
 *Here are the screen shots to show that each table was created, and then loaded correctly*
 
 #### After creating the contacts table:
-![image failed to load](Screenshots\contacts1.png)
+![image failed to load](\Screenshots\contacts1.png)
 #### After Importing the Data into the contact table:
 ![image failed to load](Screenshots\contacts2.png)
 #### After creating the category table:
