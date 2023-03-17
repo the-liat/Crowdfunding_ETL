@@ -33,8 +33,8 @@ CREATE TABLE campaign (
     contact_id INT NOT NULL, 
     company_name VARCHAR(50),
     description VARCHAR(80),
-    goal INT,
-    pledged INT,
+    goal DECIMAL,
+    pledged DECIMAL,
     outcome VARCHAR(10),
     backers_count INT,
     country VARCHAR(5),
@@ -48,5 +48,6 @@ CREATE TABLE campaign (
     FOREIGN KEY (subcategory_id) REFERENCES subcategory (subcategory_id)
 );
 -- verifying campaign table
-SELECT * FROM campaign; 
+SELECT * FROM campaign;
+
 
