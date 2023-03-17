@@ -21,8 +21,8 @@ SELECT * FROM category;
 
 -- subcategory table
 CREATE TABLE subcategory (
-	subcategory_id VARCHAR(5) NOT NULL PRIMARY KEY,
-    subcategory VARCHAR(15)
+	subcategory_id VARCHAR(10) NOT NULL PRIMARY KEY,
+    subcategory VARCHAR(20)
 );
 -- verifying subcategory table
 SELECT * FROM subcategory; 
@@ -31,9 +31,8 @@ SELECT * FROM subcategory;
 CREATE TABLE campaign (
     cf_id INT NOT NULL PRIMARY KEY,
     contact_id INT NOT NULL, 
-	FOREIGN KEY (contact_id) contacts (contact_id),
-    company_name VARCHAR(35),
-    description VARCHAR(60),
+    company_name VARCHAR(50),
+    description VARCHAR(80),
     goal INT,
     pledged INT,
     outcome VARCHAR(10),
@@ -43,9 +42,10 @@ CREATE TABLE campaign (
     launch_date DATE,
     end_date DATE,
     category_id VARCHAR(5) NOT NULL,
-	FOREIGN KEY (category_id ) category (category_id ),
     subcategory_id VARCHAR(10) NOT NULL,
-    FOREIGN KEY (subcategory_id ) subcategory (subcategory_id )
+	FOREIGN KEY (contact_id) REFERENCES contacts (contact_id),
+	FOREIGN KEY (category_id) REFERENCES category (category_id),
+    FOREIGN KEY (subcategory_id) REFERENCES subcategory (subcategory_id)
 );
 -- verifying campaign table
 SELECT * FROM campaign; 
